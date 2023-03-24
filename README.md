@@ -12,7 +12,7 @@ Scenario:
 - anyone in PagoPA GitHub Organization has `write` permission on this repository
 
 Attack scenario:
-- an internal user with `write` permission create a Pull Request to get `UNSECURE_SECRET` value (example Pull Request https://github.com/pagopa/example-bad-repo-secrets/pull/1)
+- a user with `write` permission create a Pull Request to get `UNSECURE_SECRET` value (example Pull Request https://github.com/pagopa/example-bad-repo-secrets/pull/1)
 
 ## How to configure the GitHub Secrets safetly?
 
