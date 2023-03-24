@@ -8,6 +8,7 @@ Using GitHub Action you can get the secret (catch the flag).
 
 Scenario:
 - `main` has branch protection enabled
+- `UNSECURE_SECRET` is configured on repository level
 - anyone in PagoPA GitHub Organization has `write` permission on this repository
 
 Attack scenario:
