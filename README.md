@@ -7,7 +7,7 @@ In this repository is configured is a secret named `UNSECURE_SECRET`.
 Using GitHub Action you can get the secret (catch the flag).
 
 Scenario:
-- `main` has branch protection enabled
+- `main` has branch protection enabled with a review from CODEOWNERS
 - `UNSECURE_SECRET` is configured on repository level
 - anyone in PagoPA GitHub Organization has `write` permission on this repository
 
