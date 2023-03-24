@@ -16,4 +16,4 @@ Attack scenario:
 
 ## How to configure the GitHub Secrets safetly?
 
-See https://github.com/pagopa/example-good-repo-secrets
+See this example https://github.com/pagopa/example-good-repo-secrets
