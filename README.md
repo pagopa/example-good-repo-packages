@@ -13,3 +13,7 @@ Scenario:
 
 Attack scenario:
 - an internal user with `write` permission create a Pull Request to get `UNSECURE_SECRET` value (example Pull Request https://github.com/pagopa/example-bad-repo-secrets/pull/1)
+
+## How to configure the GitHub Secrets safetly?
+
+See https://github.com/pagopa/example-good-repo-secrets
