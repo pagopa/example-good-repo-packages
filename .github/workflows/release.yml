@@ -18,6 +18,7 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-22.04
+    environment: prod
 
     steps:
       - name: Checkout
@@ -33,7 +34,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.BOT_TOKEN }}
 
       - name: Build and push Docker image
         id: docker_build_push
