@@ -1,19 +1,28 @@
-# example-bad-repo-secrets
+# example-bad-repo-packages
 
-This is a misconfigured repository to show how to leak Repository Secrets using GitHub Actions.
+This is a misconfigured repository to show how to modify a GitHub Package using write permission or GitHub Actions.
 
-In this repository is configured is a secret named `UNSECURE_SECRET`.
-
-Using GitHub Action you can get the secret (catch the flag).
-
-Scenario:
-- `main` has branch protection enabled with a review from CODEOWNERS
-- `UNSECURE_SECRET` is configured on repository level
+Reposiroty configuration:
+- `main` has branch protection enabled with a review from `CODEOWNERS`
 - anyone in PagoPA GitHub Organization has `write` permission on this repository
+- `packages` inherit access from source repository
+- GitHub Actions has access to `packages`
+- repository package is a docker image
 
-Attack scenario:
-- a user with `write` permission create a Pull Request to get `UNSECURE_SECRET` value (example Pull Request https://github.com/pagopa/example-bad-repo-secrets/pull/1)
+Attack scenario #1:
+- a user with `write` permission can modify an existing docker image tagged `v2` in `packages` using his personal PAT token
 
-## How to configure the GitHub Secrets safetly?
+```sh
+docker login ghcr.io
+> insert GITHUB_USERNAME
+> insert GITHUB_PAT_TOKEN
+docker build -f Dockerfile.evil  -t ghcr.io/pagopa/example-bad-repo-packages:v2 .
+docker image push ghcr.io/pagopa/example-bad-repo-packages:v2
+```
 
-See this example https://github.com/pagopa/example-good-repo-secrets
+Attack scenario #2:
+- a user with `write` permission can modify an existing docker image tagged `v2` in `packages` creating a Pull Request (example Pull Request https://github.com/pagopa/example-bad-repo-packages/pull/1)
+
+## How to configure the GitHub Packages safetly?
+
+See this example https://github.com/pagopa/example-good-repo-packages
