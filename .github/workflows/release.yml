@@ -37,10 +37,10 @@ jobs:
         with:
           context: .
           push: true
+          # v2 is fixed version to run the attack scenario
           tags: |
             ghcr.io/${{ github.repository }}:latest
             ghcr.io/${{ github.repository }}:${{ github.sha }}
-            # v2 is an example fixed version
             ghcr.io/${{ github.repository }}:v2
           labels: |
             maintainer=https://pagopa.it
