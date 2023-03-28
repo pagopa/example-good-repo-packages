@@ -6,8 +6,8 @@ Reposiroty configuration:
 - `main` has branch protection enabled with a review from `CODEOWNERS`
 - anyone in PagoPA GitHub Organization has `write` permission on this repository
 - `packages` inherit access from source repository
-- GitHub Actions has access to `packages`
 - repository package is a docker image
+- GitHub Actions has access to `packages`
 
 You can check `packages` settings here https://github.com/orgs/pagopa/packages/container/example-bad-repo-packages/settings
 
