@@ -9,7 +9,7 @@ Reposiroty configuration:
 - `packages` doesn't inherit access from source repository
 - repository admins has `write` permission on the `packages`
 - GitHub Actions has no access to `packages`
-- a GitHub Bot has a `write` permission on this repository. We use a secret `GITHUB_BOT_TOKEN` to authenticate the bot with a personal access token. The secret is configured as described here https://github.com/orgs/pagopa/example-good-repo-secrets
+- a GitHub Bot has a `write` permission on this repository. We use a secret `BOT_TOKEN` to authenticate the bot with a personal access token. The secret is configured as described here https://github.com/orgs/pagopa/example-good-repo-secrets
 
 You can check `packages` settings here https://github.com/orgs/pagopa/packages/container/example-good-repo-packages/settings
 
@@ -26,7 +26,7 @@ docker image push ghcr.io/pagopa/example-bad-repo-packages:v2
 ```
 
 Safe scenario #2:
-- a user with `write` permission create a Pull Request to try get `GITHUB_BOT_TOKEN` value. The GitHub Action fails to start because only a protected branch can use `prod` environment (example Pull Request https://github.com/pagopa/example-good-repo-packages/pull/1)
+- a user with `write` permission create a Pull Request to try get `BOT_TOKEN` value. The GitHub Action fails to start because only a protected branch can use `prod` environment (example Pull Request https://github.com/pagopa/example-good-repo-packages/pull/1)
 
 ## How to modify unsecure GitHub Packages?
 
