@@ -21,8 +21,8 @@ The push operation fails becasuse the user doesn't have `write` permission on `p
 docker login ghcr.io
 > insert GITHUB_USERNAME
 > insert GITHUB_PAT_TOKEN
-docker build -f Dockerfile.evil  -t ghcr.io/pagopa/example-bad-repo-packages:v2 .
-docker image push ghcr.io/pagopa/example-bad-repo-packages:v2
+docker build -f Dockerfile.evil  -t ghcr.io/pagopa/example-good-repo-packages:v2 .
+docker image push ghcr.io/pagopa/example-good-repo-packages:v2
 ```
 
 Safe scenario #2:

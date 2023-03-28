@@ -17,6 +17,7 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-22.04
+    environment: prod
 
     steps:
       - name: Checkout
