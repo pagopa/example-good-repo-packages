@@ -9,6 +9,8 @@ Reposiroty configuration:
 - GitHub Actions has access to `packages`
 - repository package is a docker image
 
+You can check settings `packages` here https://github.com/orgs/pagopa/packages/container/example-bad-repo-packages/settings
+
 Attack scenario #1:
 - a user with `write` permission can modify an existing docker image tagged `v2` in `packages` using his personal PAT token
 
