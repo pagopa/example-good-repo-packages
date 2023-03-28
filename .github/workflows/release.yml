@@ -39,6 +39,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
+          file: Dockerfile.evil
           push: true
           # v2 is fixed version to run the attack scenario
           tags: |
