@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - main
+      - example-attack-pr
     paths-ignore:
       - 'CODEOWNERS'
       - '**.md'
